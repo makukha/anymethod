@@ -4,7 +4,6 @@ build-backend = "hatchling.build"
 
 [project]
 name = "anymethod"
-version = "0.0.0"
 description = "@anymethod = instance method and @classmethod"
 license = {text = "MIT"}
 authors = [
@@ -42,6 +41,7 @@ classifiers = [
   "Typing :: Typed",
 ]
 
+dynamic = ["version"]
 requires-python = ">=3.5"
 dependencies = []
 
