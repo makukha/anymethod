@@ -21,7 +21,7 @@ from anymethod import anymethod
 
 class FooBar:
     @anymethod
-    def who_is_my_owner(owner) -> None:
+    def whoami(owner) -> None:
         print(owner)
 ```
 
