@@ -85,7 +85,7 @@ version:
     #!/usr/bin/env bash
     set -euo pipefail
     uv run bump-my-version show-bump
-    printf 'Enter bump path: '
+    printf 'Choose bump path: '
     read BUMP
     uv run bump-my-version bump -- "$BUMP"
     uv lock

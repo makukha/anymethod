@@ -47,6 +47,7 @@ dependencies = []
 
 [dependency-groups]
 dev = [
+  "bump-my-version; python_version>='3.13'",
   "caseutil>=0.7; python_version>='3.12'",
   "docsub>=0.8; python_version>='3.12'",
   "genbadge[tests,coverage]>=1.1; python_version>='3.12'",
@@ -58,7 +59,7 @@ dev = [
 # bump-my-version
 
 [tool.bumpversion]
-current_version = "0.0.0"
+current_version = "0.1.0"
 allow_dirty = true
 files = [
   {filename = "README.md"},
@@ -94,8 +95,8 @@ docstring-code-line-length = "dynamic"
 [tool.towncrier]
 directory = "NEWS.d"
 filename = "CHANGELOG.md"
-title_format = "## [v{version}](https://github.com/makukha/anytype/releases/tag/v{version}) — {project_date}"
-issue_format = "[#{issue}](https://github.com/makukha/anytype/issues/{issue})"
+title_format = "## [v{version}](https://github.com/makukha/anymethod/releases/tag/v{version}) — {project_date}"
+issue_format = "[#{issue}](https://github.com/makukha/anymethod/issues/{issue})"
 type = [
   {name = "Security ⚠️", directory = "security", showcontent = true},
   {name = "Breaking 🔥", directory = "breaking", showcontent = true},
