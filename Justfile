@@ -72,13 +72,13 @@ docs:
 # just test
 # just docs
 #
-# just version [patch|minor|major]
+# just version
 # just changelog
 # (proofread changelog)
 #
 # just docs
 # just build
-# just push-pypi
+# just publish-pypi
 # (create github release)
 #
 
@@ -104,6 +104,6 @@ changelog:
 
 # publish package on PyPI
 [group('release')]
-push-pypi:
+publish-pypi:
     @just build
     uv publish
