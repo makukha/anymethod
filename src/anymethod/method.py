@@ -3,8 +3,10 @@ class anymethod(object):
         self.func = func
 
     def __get__(self, obj, cls=None):
-        owner = obj if obj is not None else cls
-        return self.func.__get__(owner, cls)
+        if obj is None:
+            return self.func.__get__(cls)
+        else:
+            return self.func.__get__(obj)
 
     @property
     def __isabstractmethod__(self):
