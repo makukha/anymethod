@@ -12,6 +12,7 @@ def test_cls_typing() -> None:
     # assert_type(A.whoami(), type[A])  # todo: must pass
     assert A.whoami() is A
 
+
 def test_obj_typing() -> None:
     a = A()
     # assert_type(a.whoami(), A)  # todo: must pass

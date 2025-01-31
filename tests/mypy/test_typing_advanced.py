@@ -8,8 +8,7 @@ class A:
         return owner
 
 
-class B(A):
-    ...
+class B(A): ...
 
 
 def test_typing() -> None:
