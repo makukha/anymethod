@@ -10,4 +10,4 @@
 cls <class '__main__.FooBar'>
 
 >>> FooBar().whoami()
-obj <__main__.FooBar object ...>
+obj <__main__.FooBar object at 0x...>

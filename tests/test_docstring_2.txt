@@ -1,11 +1,13 @@
->>> import inspect
 >>> from anymethod import *
 
->>> class FooBar:
+>>> class FooBar(object):
 ...     @anymethod
-...     def me(owner) -> None:
+...     def me(owner):
 ...         """Docstring"""
 ...         print(owner)
 
->>> inspect.getdoc(FooBar.me)
+>>> FooBar.me.__doc__
+'Docstring'
+
+>>> FooBar().me.__doc__
 'Docstring'
