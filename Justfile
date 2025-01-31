@@ -2,10 +2,12 @@ default:
   @just --list
 
 
-# init local dev environment
+# update local dev environment
 [group('dev')]
 sync:
     uv sync
+    echo "#!/usr/bin/env bash\njust pre-commit" > .git/hooks/pre-commit
+    chmod a+x .git/hooks/pre-commit
 
 
 # add news item of type
@@ -63,6 +65,11 @@ docs:
     make docs
     uv run docsub apply -i README.md
 
+# run pre-commit hook
+[group('dev')]
+pre-commit:
+    @just lint docs
+
 
 #
 #  Release
@@ -83,7 +90,7 @@ docs:
 #
 
 
-# bump project version (major|minor|patch)
+# bump project version
 [group('release')]
 version:
     #!/usr/bin/env bash
