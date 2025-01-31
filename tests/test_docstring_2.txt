@@ -2,12 +2,12 @@
 
 >>> class FooBar(object):
 ...     @anymethod
-...     def me(owner):
+...     def whoami(owner):
 ...         """Docstring"""
 ...         print(owner)
 
->>> FooBar.me.__doc__
+>>> FooBar.whoami.__doc__
 'Docstring'
 
->>> FooBar().me.__doc__
+>>> FooBar().whoami.__doc__
 'Docstring'
