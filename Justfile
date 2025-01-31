@@ -52,6 +52,10 @@ test *toxargs: ( build )
       $TOX run-parallel --installpkg="$PKG"
     fi
 
+# enter testing docker container
+[group('dev')]
+shell:
+    docker compose run --rm -it --entrypoint bash tox
 
 # compile docs
 [group('dev')]

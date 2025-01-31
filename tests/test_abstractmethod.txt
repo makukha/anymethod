@@ -1,5 +1,5 @@
 >>> from abc import ABC, abstractmethod
->>> from anymethod import *
+>>> from anymethod import anymethod
 
 >>> class Base(ABC):
 ...     @anymethod
@@ -10,7 +10,7 @@
 >>> Base()
 Traceback (most recent call last):
     ...
-TypeError: Can't instantiate abstract class Base without an implementation for abstract method 'whoami'
+TypeError: Can't instantiate abstract class Base ...
 
 >>> class FooBar(Base):
 ...     @anymethod

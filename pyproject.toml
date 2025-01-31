@@ -52,6 +52,7 @@ dev = [
   "docsub>=0.8; python_version>='3.12'",
   "genbadge[tests,coverage]>=1.1; python_version>='3.12'",
   "mypy>=1.14; python_version>='3.12'",
+  "pytest>=4.6; python_version>='3.12'",
   "ruff>=0.9; python_version>='3.12'",
   "towncrier>=24.8; python_version>='3.12'",
 ]

@@ -1,4 +1,4 @@
->>> from anymethod import *
+>>> from anymethod import anymethod
 
 >>> class FooBar:
 ...     @anymethod

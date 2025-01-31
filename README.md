@@ -14,18 +14,6 @@ For the cases when class and its instances can be used interchangeably, code dup
 This can be easily achieved with Python [descriptors](https://docs.python.org/3/howto/descriptor.html).
 
 
-## Usage
-
-```python
-from anymethod import anymethod
-
-class FooBar:
-    @anymethod
-    def whoami(owner) -> None:
-        print(owner)
-```
-
-
 ## Installation
 
 ```shell
@@ -33,25 +21,51 @@ $ pip install anymethod
 ```
 
 
-## Example
+## Example A
 
 <!-- docsub: begin -->
-<!-- docsub: include tests/test_usage.txt -->
+<!-- docsub: include tests/mypy/test_exampleA.txt -->
 <!-- docsub: lines after 1 upto -1 -->
 ```dectest
->>> from anymethod import *
+>>> from anymethod import anymethod
 
 >>> class FooBar:
 ...     @anymethod
-...     def whoami(owner) -> None:
-...         me = 'cls' if isinstance(owner, type) else 'obj'
-...         print(me, owner)
+...     def whoami[O](owner: O) -> O:
+...         return owner
 
 >>> FooBar.whoami()
-cls <class '__main__.FooBar'>
+<class '__main__.FooBar'>
 
 >>> FooBar().whoami()
-obj <__main__.FooBar object ...>
+<__main__.FooBar object at 0x...>
+```
+<!-- docsub: end -->
+
+
+## Example B
+
+<!-- docsub: begin -->
+<!-- docsub: include tests/mypy/exampleB.py -->
+<!-- docsub: lines after 1 upto -1 -->
+```python
+from typing import Any, ClassVar
+from anymethod import anymethod
+
+
+class FooBar:
+    _cls: ClassVar[list[Any]] = []
+    _obj: list[Any]
+
+    def __init__(self) -> None:
+        self._obj = []
+
+    @anymethod
+    def add_value(owner, v: Any) -> None:
+        if isinstance(owner, type):
+            owner._cls.append(v)
+        else:
+            owner._obj.append(v)
 ```
 <!-- docsub: end -->
 

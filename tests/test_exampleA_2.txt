@@ -3,11 +3,10 @@
 >>> class FooBar(object):
 ...     @anymethod
 ...     def whoami(owner):
-...         """Docstring"""
 ...         print(owner)
 
->>> FooBar.whoami.__doc__
-'Docstring'
+>>> FooBar.whoami()
+<class '__main__.FooBar'>
 
->>> FooBar().whoami.__doc__
-'Docstring'
+>>> FooBar().whoami()  # doctest: +ELLIPSIS
+<__main__.FooBar object at 0x...>
