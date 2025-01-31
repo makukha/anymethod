@@ -8,6 +8,23 @@ All notable changes to this project will be documented in this file based on [Ke
 
 <!-- towncrier release notes start -->
 
+## [v0.1.1](https://github.com/makukha/anymethod/releases/tag/v0.1.1) — 2025-01-31
+
+***Added 🌿***
+
+- Support Python 2.7 ([#3](https://github.com/makukha/anymethod/issues/3))
+
+***Fixed***
+
+- Fixed typing for Python 3.12+ ([#5](https://github.com/makukha/anymethod/issues/5))
+
+***Misc***
+
+- Simplified `anymethod` descriptor ([#3](https://github.com/makukha/anymethod/issues/3))
+- Run mypy checks in all environments with Python >=3.12 ([#3](https://github.com/makukha/anymethod/issues/3))
+- Added tests for `__isabstractmethod__` ([#5](https://github.com/makukha/anymethod/issues/5))
+
+
 ## [v0.1.0](https://github.com/makukha/anymethod/releases/tag/v0.1.0) — 2025-01-29
 
 ***Added 🌿***

@@ -72,7 +72,7 @@ docs:
 # just test
 # just docs
 #
-# just version [patch|minor|major]
+# just version
 # just changelog
 # (proofread changelog)
 #
