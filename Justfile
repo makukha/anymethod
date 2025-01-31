@@ -6,7 +6,8 @@ default:
 [group('dev')]
 sync:
     uv sync
-    echo "#!/usr/bin/env sh\njust pre-commit" > .git/hooks/pre-commit
+    echo "#!/usr/bin/env bash\njust pre-commit" > .git/hooks/pre-commit
+    chmod a+x .git/hooks/pre-commit
 
 
 # add news item of type
