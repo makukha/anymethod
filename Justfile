@@ -78,7 +78,7 @@ docs:
 #
 # just docs
 # just build
-# just push-pypi
+# just publish-pypi
 # (create github release)
 #
 
@@ -104,6 +104,6 @@ changelog:
 
 # publish package on PyPI
 [group('release')]
-push-pypi:
+publish-pypi:
     @just build
     uv publish
