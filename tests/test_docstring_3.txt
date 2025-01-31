@@ -3,12 +3,11 @@
 >>> class FooBar:
 ...     @anymethod
 ...     def me(owner) -> None:
+...         """Docstring"""
 ...         print(owner)
 
->>> foobar = FooBar()
->>> FooBar.me != foobar.me
-True
->>> foobar.me == foobar.me
-True
->>> foobar.me != FooBar().me
-True
+>>> FooBar.me.__doc__
+'Docstring'
+
+>>> FooBar().me.__doc__
+'Docstring'

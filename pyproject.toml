@@ -42,12 +42,12 @@ classifiers = [
 ]
 
 dynamic = ["version"]
-requires-python = ">=3.5"
+requires-python = ">=2.7,!=3.0,!=3.1,!=3.2,!=3.3,!=3.4"
 dependencies = []
 
 [dependency-groups]
 dev = [
-  "bump-my-version; python_version>='3.13'",
+  "bump-my-version; python_version>='3.12'",
   "caseutil>=0.7; python_version>='3.12'",
   "docsub>=0.8; python_version>='3.12'",
   "genbadge[tests,coverage]>=1.1; python_version>='3.12'",

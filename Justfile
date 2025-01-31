@@ -41,13 +41,13 @@ build:
 
 # run tests
 [group('dev')]
-test *label: ( build )
+test *toxargs: ( build )
     #!/usr/bin/env bash
     set -euo pipefail
     PKG="$(find dist -name '*.whl')"
     TOX="time docker compose run --rm -it tox"
-    if [ -n "{{label}}" ]; then
-      $TOX run --installpkg="$PKG" -m "{{label}}"
+    if [ -n "{{toxargs}}" ]; then
+      $TOX run --installpkg="$PKG" {{toxargs}}
     else
       $TOX run-parallel --installpkg="$PKG"
     fi
