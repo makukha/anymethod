@@ -8,6 +8,17 @@ All notable changes to this project will be documented in this file based on [Ke
 
 <!-- towncrier release notes start -->
 
+## [v0.1.2](https://github.com/makukha/anymethod/releases/tag/v0.1.2) — 2025-02-01
+
+***Fixed***
+
+- Added Python 2.7 to project metadata ([#9](https://github.com/makukha/anymethod/issues/9))
+
+***Misc***
+
+- Added pre-commit hook ([#11](https://github.com/makukha/anymethod/issues/11))
+
+
 ## [v0.1.1](https://github.com/makukha/anymethod/releases/tag/v0.1.1) — 2025-01-31
 
 ***Added 🌿***

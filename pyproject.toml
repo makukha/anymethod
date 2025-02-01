@@ -62,7 +62,7 @@ dev = [
 # bump-my-version
 
 [tool.bumpversion]
-current_version = "0.1.1"
+current_version = "0.1.2"
 allow_dirty = true
 files = [
   {filename = "README.md"},
